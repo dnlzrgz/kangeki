@@ -1,0 +1,34 @@
+[project]
+name = "kangeki"
+version = "0.1.0"
+description = "A simple mood tracking and micro-journal application for the terminal."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = [
+  "pydantic-settings>=2.6.1",
+  "sqlalchemy>=2.0.36",
+  "textual>=0.88.1",
+]
+
+[project.urls]
+homepage = "https://dnlzrgz.com/projects/kangeki/"
+source = "https://github.com/dnlzrgz/kangeki"
+issues = "https://github.com/dnlzrgz/kangeki/issues"
+releases = "https://github.com/dnlzrgz/kangeki/releases"
+
+[project.scripts]
+kangeki = "kangeki:app.main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+  "commitizen>=4.0.0",
+  "pytest-benchmark>=5.1.0",
+  "pytest>=8.3.3",
+  "ruff>=0.8.1",
+  "textual-dev>=1.7.0",
+]
